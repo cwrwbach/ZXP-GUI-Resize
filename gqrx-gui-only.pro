@@ -62,23 +62,28 @@ CONFIG(debug, debug|release) {
 }
 
 
+LIBS += -lpthread -lm -lmirsdrapi-rsp -lfftw3
+LIBS += -lluaradio -lluajit-5.1 -Wl,-E
+LIBS += -lliquid -lasound 
+
+
 # Input
 
 HEADERS +=	freqctrl.h \
 			plotter.h \
-	#		qtcolorpicker.h \
 			gqrx.h \
-			mainwindow.h \
-			meter.h 
+			MainWindow.h \
+			meter.h \
+            Rxr.h
 
 FORMS += mainwindow.ui 
          
 SOURCES +=  freqctrl.cpp \
 			meter.cpp \
 			plotter.cpp \
-	#		qtcolorpicker.cpp \
-			main.cpp \
-			mainwindow.cpp 
+			Main.cpp \
+			MainWindow.cpp \
+            Rxr.cpp
            
 
 
